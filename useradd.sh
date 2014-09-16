@@ -12,7 +12,8 @@ fi
 #ホームディレクトリのパーミッション変更		
 chmod 711 /home/$1
 
-# Disk quota のサンプルをコピー
+# Disk quota のサンプルをコピー 
+# DISK quotaを使っていない場合コメントアウト
 edquota -p sample $1
 
 # パスワード設定		
