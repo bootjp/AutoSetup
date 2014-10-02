@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # 引数確認
 if [ $# -ne 2 ]; then
