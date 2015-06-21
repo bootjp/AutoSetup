@@ -1,8 +1,12 @@
-Auto-useradd
+My Servers Setup Script
 ============
 Example of use Hosting server for auto useradd.
   
   
 Use ./useradd.sh username password 
-  
-その他のスクリプトはそのうち揃える
+
+
+memo : 
+```bash
+find . -name "*.sh" -type f -print | xargs chmod 744
+```
