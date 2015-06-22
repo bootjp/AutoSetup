@@ -107,8 +107,8 @@ sed -i".org" "s/group = apache/group = nginx/g" /etc/php-fpm.d/www.conf || exit 
 
 # file permissions change
 mkdir -p /var/www/html/$1 || exit 1
-chown -R nginx:nginx /var/www/html/ || exit 1
 echo "<?php echo phpinfo();" > /var/www/html/$1/index.php || exit 1
+chown -R nginx:nginx /var/www/html/ || exit 1
 
 # daemons start
 service nginx start || exit 1
