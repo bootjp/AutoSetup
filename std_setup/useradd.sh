@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# 引数確認
+# args 
+# username userpassword
 if [ $# -ne 2 ]; then
  echo "error"
  exit 1
