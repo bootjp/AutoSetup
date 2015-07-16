@@ -6,3 +6,5 @@ brew tap sanemat/font
 brew install Caskroom/cask/xquartz
 brew install ricty
 cp -f /usr/local/Cellar/ricty/3.2.4/share/fonts/Ricty*.ttf ~/Library/Fonts/
+
+# source:http://morizyun.github.io/blog/ricty-font-homebrew-mac/
