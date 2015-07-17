@@ -1,4 +1,4 @@
-My Servers Setup Script
+My Servers Client Auto Setup Script
 ============
 Example of use Hosting server for auto useradd.
   
