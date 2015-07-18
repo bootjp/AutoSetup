@@ -1,4 +1,5 @@
-_Store
+*~
+.DS_Store
 nbproject/
 nbactions.xml
 nb-configuration.xml
