@@ -1,0 +1,9 @@
+_Store
+nbproject/
+nbactions.xml
+nb-configuration.xml
+nbactions-development.xml
+nb-configuration
+composer.lock
+target/
+vendor/
