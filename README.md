@@ -1,9 +1,5 @@
 My Servers and Client Auto Setup Script
 ============
-Example of use Hosting server for auto useradd.
-  
-  
-Use ./useradd.sh username password 
 
 
 memo : 
