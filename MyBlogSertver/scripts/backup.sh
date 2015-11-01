@@ -2,7 +2,7 @@
 
 TODAY=`TZ=JST-9 date +%Y%m%d`
 
-mysqldump -h [Hostname] -p[Password]  -u[User] --all-databases --events > /root/RDS_BACKUP/bootjp.me.sql.gz
+mysqldump -h [Hostname] -p[Password]  -u[User] --all-databases --events --single-transaction --skip-dump-date --quick > /root/RDS_BACKUP/bootjp.me.sql.gz
 
 cd /root/RDS_BACKUP/
 git add -A
