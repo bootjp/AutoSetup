@@ -1,4 +1,4 @@
 #My blog server config files
 
-This server environment is AWS EC2. 
+This server environment is ConoHa VPS. 
 
