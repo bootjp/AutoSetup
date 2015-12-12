@@ -32,7 +32,7 @@ nginx -t
 status=$?
 if [ $status -eq 0 ]; then
   systemctl reload nginx
-  else
+else
   echo "Nginx Error!!"
   exit 1
 fi
@@ -48,7 +48,7 @@ nginx -t
 status=$?
 if [ $status -eq 0 ]; then
   systemctl reload nginx
-  else
+else
   echo "Nginx Error!!"
   exit 1
 fi
