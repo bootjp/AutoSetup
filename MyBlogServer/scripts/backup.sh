@@ -37,27 +37,6 @@ if [ $status -eq 0 ]; then
   exit 1
 fi
 
-yum -y update
-yum -y update --enablerepo=remi --enablerepo=remi-php56
-
-cd /root/letsencrypt
-
-./letsencrypt-auto --renew certonly --webroot -d bootjp.me --webroot-path /var/www/bootjp.me/
-status=$?
-if [ $status -ne 0 ]; then
-  echo "letsencrypt bootjp.me Error!!"
-  exit 1
-fi
-
-nginx -t
-status=$?
-if [ $status -eq 0 ]; then
-  systemctl reload nginx
-  else
-  echo "Nginx Error!!"
-  exit 1
-fi
-
 ./letsencrypt-auto --renew certonly --webroot -d st.bootjp.me --webroot-path /var/www/bootjp.me/wp-content/uploads/
 status=$?
 if [ $status -ne 0 ]; then
