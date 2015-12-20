@@ -6,7 +6,5 @@ export PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)
 export HISTCONTROL=ignoredups:erasedups
 export HISTSIZE=100000
 export HISTFILESIZE=100000
-shopt -s histappend
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 alias mecajavac='env DYLD_LIBRARY_PATH=".:/usr/local/bin/mecab-java" CLASSPATH=".:$CLASSPATH:/usr/local/bin/mecab-java/MeCab.jar" javac'
 alias mecajava='env DYLD_LIBRARY_PATH=".:/usr/local/bin/mecab-java" CLASSPATH=".:$CLASSPATH:/usr/local/bin/mecab-java/MeCab.jar" java'
