@@ -11,7 +11,7 @@ if [ $status -ne 0 ]; then
   exit 1
 fi
 
-nginx -t
+/usr/sbin/nginx -t
 status=$?
 if [ $status -eq 0 ]; then
   systemctl reload nginx
@@ -27,7 +27,7 @@ if [ $status -ne 0 ]; then
   exit 1
 fi
 
-nginx -t
+/usr/sbin/nginx -t
 status=$?
 if [ $status -eq 0 ]; then
   systemctl reload nginx
@@ -43,7 +43,7 @@ if [ $status -ne 0 ]; then
   exit 1
 fi
 
-nginx -t
+/usr/sbin/nginx -t
 status=$?
 if [ $status -eq 0 ]; then
   systemctl reload nginx
