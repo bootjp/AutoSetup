@@ -1,17 +1,16 @@
 #!/bin/bash
 
-# 0 4 */15 * * /root/encrypt.sh
+# 0 4 */10 * * /root/encrypt.sh
 
 cd /root/letsencrypt
-
-./letsencrypt-auto --renew certonly --webroot -d bootjp.me --webroot-path /var/www/bootjp.me/
+./letsencrypt-auto --renew certonly --webroot -d bootjp.me -d www.bootjp.me --webroot-path /var/www/bootjp.me/
 status=$?
 if [ $status -ne 0 ]; then
   echo "letsencrypt bootjp.me Error!!"
   exit 1
 fi
 
-nginx -t
+/usr/sbin/nginx -t
 status=$?
 if [ $status -eq 0 ]; then
   systemctl reload nginx
@@ -27,7 +26,7 @@ if [ $status -ne 0 ]; then
   exit 1
 fi
 
-nginx -t
+/usr/sbin/nginx -t
 status=$?
 if [ $status -eq 0 ]; then
   systemctl reload nginx
