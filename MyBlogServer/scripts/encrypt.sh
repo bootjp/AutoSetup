@@ -3,6 +3,9 @@
 # 0 4 */10 * * /root/encrypt.sh
 
 cd /root/letsencrypt
+
+git pull
+
 ./letsencrypt-auto --renew certonly --webroot -d bootjp.me -d www.bootjp.me --webroot-path /var/www/bootjp.me/
 status=$?
 if [ $status -ne 0 ]; then
