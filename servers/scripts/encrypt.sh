@@ -5,8 +5,7 @@
 cd /root/letsencrypt
 
 git pull
-
-./letsencrypt-auto --renew certonly --webroot -d bootjp.me -d www.bootjp.me --webroot-path /var/www/bootjp.me/
+./letsencrypt-auto --renew-by-default certonly --webroot -d bootjp.me -d www.bootjp.me --webroot-path /var/www/bootjp.me/
 status=$?
 if [ $status -ne 0 ]; then
   echo "letsencrypt bootjp.me Error!!"
@@ -22,7 +21,7 @@ else
   exit 1
 fi
 
-./letsencrypt-auto --renew certonly --webroot -d st.bootjp.me --webroot-path /var/www/bootjp.me/wp-content/uploads/
+./letsencrypt-auto --renew-by-default certonly --webroot -d st.bootjp.me --webroot-path /var/www/bootjp.me/wp-content/uploads/
 status=$?
 if [ $status -ne 0 ]; then
   echo "letsencrypt st.bootjp.me Error!!"
